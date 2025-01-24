@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning Blog</title>
+    <link href="blog.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#" onclick="location.reload();"><img src="a6.jpg"></a>
+            </div>
+
+            <!-- Add hamburger menu button -->
+            <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                <li><a href="main service page.html" class="nav-link">Services</a></li>
+                <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <button class="btn-primary">Your Events</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="blog-header">
+            <h1>Event Planning Insights & Tips</h1>
+            <p>Stay updated with the latest trends and expert advice in event planning</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search blog posts..." oninput="searchPosts()">
+            <button onclick="searchPosts()">Search</button>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-card">
+                <img src="wedding-theme-feature-image.jpg" alt="5 Creative Wedding Theme Ideas for 2024" class="blog-image">
+                <div class="blog-content">
+                    <h2>Creative Wedding Theme Ideas for 2024</h2>
+                    <p>Discover unique and trending wedding themes that will make your special day unforgettable...</p>
+                    <p><small>Dec 20, 2024 | 6 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('wedding-theme')">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card">
+                <img src="virtual_conference.png" alt="How to Plan a Successful Virtual Conference" class="blog-image">
+                <div class="blog-content">
+                    <h2>How to Plan a Successful Virtual Conference</h2>
+                    <p>Learn the essential steps to organize and execute a memorable virtual conference...</p>
+                    <p><small>Dec 18, 2024 | 3 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('virtual-conference')">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <img src="header-budget-friendly-party-ideas.png" alt="Budget-Friendly Party Planning Tips" class="blog-image">
+                <div class="blog-content">
+                    <h2>Budget-Friendly Party Planning Tips</h2>
+                    <p>Create an amazing event without breaking the bank with these smart planning strategies...</p>
+                    <p><small>Dec 15, 2024 | 4 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('party-planning')">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="blog-card">
+                <img src="event-tech-body.png" alt="Latest Event Tech Trends" class="blog-image">
+                <div class="blog-content">
+                    <h2>Latest Event Tech Trends</h2>
+                    <p>Stay ahead of the curve with these cutting-edge event technology solutions...</p>
+                    <p><small>Dec 12, 2024 | 5 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('event-tech')">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="blog-card">
+                <img src="planted-entrance.png" alt="Sustainable Event Decorations" class="blog-image">
+                <div class="blog-content">
+                    <h2>Sustainable Event Decorations</h2>
+                    <p>Eco-friendly decoration ideas that make a statement while protecting the environment...</p>
+                    <p><small>Dec 10, 2024 | 4 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('sustainable-decor')">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article class="blog-card">
+                <img src="social-media.png" alt="Social Media Marketing for Events" class="blog-image">
+                <div class="blog-content">
+                    <h2>Social Media Marketing for Events</h2>
+                    <p>Master the art of promoting your events effectively on social media platforms...</p>
+                    <p><small>Dec 8, 2024 | 5 min read</small></p>
+                    <a href="#" class="read-more" onclick="openBlogModal('social-media-marketing')">Read More</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Toggle Navigation Menu for Mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Open the Blog Modal with Dynamic Content
+        function openBlogModal(postId) {
+            const modal = document.getElementById('blogModal');
+            const modalContent = document.getElementById('modalContent');
+
+            // Define the descriptions for each blog post
+            const descriptions = {
+                'wedding-theme': `<h2>Creative Wedding Theme Ideas for 2024</h2><br>
+<pre><strong>1. Modern Wedding Theme</strong>
+<img src="modern-wedding-theme.jpg" style="width:400px;height:250px;" alt="Modern Wedding Theme" >
+If you want to streamline the wedding planning process, you can choose a modern-themed wedding. 
+Modern themes borrow the sleek styles and simple colors of contemporary fashion.Many modern 
+wedding decor features a minimalist style that features clean lines and little extra clutter.
+
+<strong>2. Vintage Wedding Theme</strong>
+<img src="vintage-wedding.jpg" style="width:400px;height:250px;" alt="Vintage Wedding Theme" >
+Sometimes, the best lessons are from the past. A vintage wedding theme borrows its elements from 
+previous eras. Think of a wedding with 1920 clothing or a wedding full of the flair of the ’70s. You 
+can encapsulate these themes with the wedding dress, wedding flowers, wedding invitations, and more.
+
+<strong>3.Rustic Wedding Theme</strong>
+<img src="rustic-wedding-theme.jpg" style="width:400px;height:250px;" alt="Rustic Wedding Theme" >
+Rustic weddings are a good alternative wedding theme because their wood fixtures and earthy colors 
+contrast nicely with a classic wedding theme. You can get creative with the decor elements, such as 
+mason jars, DIY fans, lace, string lights, and more. A country wedding is a great way to get creative
+with the bridal gown and natural elements.
+</pre>`,
+                
+                'virtual-conference': `<h2>How to Plan a Successful Virtual Conference</h2><br>
+<pre>
+Remember when virtual events felt like awkward video calls? Not anymore! Today's virtual conferences
+can be just as engaging as in-person events if you know the secrets. The key is creating an experience 
+that keeps attendees glued to their screens (in a good way!).
+</pre><br>
+
+<h4>Pro Tips:</h4><br>
+<ul>
+<li>Choose the right virtual platform based on your needs (breakout rooms, networking features, 
+audience size, etc.)</li><br>
+<li>Provide thorough technical training for speakers and moderators at least a week before</li><br>
+<li>Create engagement opportunities through polls, Q&A sessions, and interactive workshops</li><br>
+<li>Keep sessions shorter than in-person events (30-45 minutes ideal) with frequent breaks</li><br>
+<li>Have dedicated technical support staff available throughout the event</li><br>
+<li>Consider time zones when scheduling for international audiences</li>
+</ul>`,
+                
+                'party-planning': `<h2>Budget-Friendly Party Planning Tips</h2><br>
+<pre>
+Who says you need a fortune to throw an unforgettable party? With some creativity and smart planning, 
+you can create Instagram-worthy events without breaking the bank. Think of it as a fun challenge to 
+make every dollar work harder!
+</pre><br>
+
+<h4>Money-Saving Magic:</h4><br>
+<ul>
+<li>Consider off-peak seasons and non-traditional days/times for better venue rates</li><br>
+<li>Use digital invitations instead of printed ones</li><br>
+<li>Create centerpieces using seasonal or readily available items</li><br>
+<li>Opt for buffet or family-style service instead of plated meals</li><br>
+<li>Source decorations from dollar stores or buy in bulk</li><br>
+<li>Consider DIY elements for personal touches at lower costs</li><br>
+<li>Partner with new vendors who might offer introductory rates</li>
+</ul>`,
+                
+                'event-tech': `<h2>Latest Event Tech Trends</h2><br>
+<pre>
+The event tech landscape is evolving faster than ever, bringing sci-fi-worthy innovations to life. 
+From AI matchmaking to immersive experiences, technology is revolutionizing how we connect and 
+engage at events.
+</pre><br>
+
+<h4>Trending Tech:</h4><br>
+<ul>
+<li>AI-powered matchmaking for networking events</li><br>
+<li>Augmented reality (AR) for enhanced attendee experiences</li><br>
+<li>Hybrid event platforms that seamlessly blend in-person and virtual attendance</li><br>
+<li>RFID wristbands for contactless payments and access control</li><br>
+<li>Real-time analytics and attendee tracking</li><br>
+<li>Mobile event apps with personalized schedules and networking features</li><br>
+<li>Virtual reality (VR) for immersive experiences</li>
+</ul>`,
+                
+                'sustainable-decor': `<h2>Sustainable Event Decorations</h2><br>
+<pre>
+Green is the new black in event planning! Eco-friendly events aren't just trendy they're becoming 
+the gold standard. The best part? Sustainable choices often create more memorable and meaningful 
+experiences.
+</pre><br>
+
+<h4>Earth-Friendly Ideas:</h4><br>
+<ul>
+<li>Use potted plants or succulents that can be replanted or given as gifts</li><br>
+<li>Rent larger decorative items instead of buying</li><br>
+<li>Choose LED lighting over traditional bulbs</li><br>
+<li>Incorporate natural materials like bamboo or recycled wood</li><br>
+<li>Use digital signage instead of printed banners</li><br>
+<li>Select reusable or biodegradable tableware</li><br>
+<li>Create centerpieces from locally sourced materials</li>
+</ul>`,
+                
+                'social-media-marketing': `<h2>Social Media Marketing for Events</h2><br>
+<pre>
+In today's digital age, your event starts long before the doors open. Social media isn't just about 
+promotion it's about creating a community and building excitement that makes your event unmissable.
+</pre><br>
+
+<h4>Digital Marketing Magic:</h4><br>
+<ul>
+<li>Create a unique, memorable event hashtag and use it consistently</li><br>
+<li>Develop a content calendar starting months before the event</li><br>
+<li>Share behind-the-scenes content to build anticipation</li><br>
+<li>Use Instagram Stories and Reels for dynamic event promotion</li><br>
+<li>Leverage influencers or speakers' networks for wider reach</li><br>
+<li>Create shareable graphics with key event details</li><br>
+<li>Live-stream portions of the event to engage remote audiences</li><br>
+<li>Post real-time updates during the event to maintain excitement</li>
+</ul>`
+            };
+
+            // Set the content in the modal
+            modalContent.innerHTML = descriptions[postId] || `<p>Content not found.</p>`;
+
+            // Show the modal
+            modal.style.display = 'block';
+        }
+
+        // Close the Blog Modal
+        function closeModal() {
+            const modal = document.getElementById('blogModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Search functionality (for the blog post list)
+        function searchPosts() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            blogCards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add this JavaScript code
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+    
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+    
+        // Prevent scrolling when menu is open
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+        
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

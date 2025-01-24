@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetimonials Page</title>
+  <link rel="stylesheet" href="testimonial.css">
+  
+</head>
+
+<body>
+     <!-- Navigation -->
+     <nav id="navigation" class="navigation">
+      <div class="nav-container">
+          <div class="logo">
+              <a href="#" onclick="location.reload();"><img src="logo.jpg"></a>
+          </div>
+          <!-- Add hamburger menu button -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+            <li><a href="main service page.html" class="nav-link">Services</a></li>
+            <li><a href="blog.html" class="nav-link">Blogs</a></li>
+            <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+            <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+          <button class="btn-primary">Your Events</button>
+      </div>
+    </nav>
+
+
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="testimonials-header">
+      <h1>OUR HAPPY CLIENTS</h1>
+      <p>We love creating memories that will last a lifetime.
+        Our happy clients have left us some love after being overjoyed with their weddings and events.
+        See the reviews they’ve left for us…</p>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials-section">
+    <!-- Testimonial 1 -->
+    <div class="testimonial">
+      <img src="wedding1.jpg" alt="Wedding 1">
+      <div class="testimonial-content">
+        <h3>Emily & John</h3>
+        <p>"Our wedding was magical! Every detail was handled with perfection. The team made our dreams come true!"</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial">
+      <img src="wedding2.jpg" alt="Wedding 2">
+      <div class="testimonial-content">
+        <h3>Sophia & Michael</h3>
+        <p>"We couldn’t have asked for a better planner. The day was flawless, and we enjoyed every moment!"</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial">
+      <img src="get_together.jpg" alt="Get Together">
+      <div class="testimonial-content">
+        <h3>Corporate Event</h3>
+        <p>"Our team-building event was seamless and fun. The attention to detail was remarkable."</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial">
+      <img src="wedding3.jpg" alt="Wedding 3">
+      <div class="testimonial-content">
+        <h3>Anna & David</h3>
+        <p>"A heartfelt thank you to the team for making our wedding unforgettable. Every detail was perfect."</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 5 -->
+    <div class="testimonial">
+      <img src="birthday2.jpg" alt="Birthday 2">
+      <div class="testimonial-content">
+        <h3>Mary’s Birthday</h3>
+        <p>"The birthday party was beautifully organized. The decorations and vibe were incredible!"</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 6 -->
+    <div class="testimonial">
+      <img src="birthday.jpg" alt="Birthday">
+      <div class="testimonial-content">
+        <h3>Chris’s Birthday</h3>
+        <p>"Amazing work! The team made the celebration unforgettable with their creative ideas."</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--review section-->
+<section id="client-reviews" class="review-section">
+  <div class="review-header">
+    <h2>Rate Your Experience with Us</h2>
+    <p>We value your feedback! Please rate your experience and leave a review below.</p>
+  </div>
+  <form class="review-form" action="https://www.facebook.com/sharer/sharer.php" method="get" target="_blank">
+    <label for="rating">Rate Us:</label>
+    <select id="rating" name="rating" required>
+      <option value="" disabled selected>Choose a rating</option>
+      <option value="5">★★★★★ (5 Stars)</option>
+      <option value="4">★★★★ (4 Stars)</option>
+      <option value="3">★★★ (3 Stars)</option>
+      <option value="2">★★ (2 Stars)</option>
+      <option value="1">★ (1 Star)</option>
+    </select>
+
+    <label for="review">Write a Review:</label>
+    <textarea id="review" name="quote" rows="4" placeholder="Share your experience..." required></textarea>
+
+    <!-- Link to Facebook page -->
+    <input type="hidden" name="u" value="https://www.facebook.com/YourFBPageLink">
+    <button type="submit" class="btn-primary">Submit Review</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+      <p>&copy; A6 Events All Rights Reserved</p>
+      
+      <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+  </div>
+  <ul class="socials">
+      <li><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><a href="https://www.x.com/">Twitter</a></li>
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+  </ul>
+</footer>
+<script >
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+
+// Prevent scrolling when menu is open
+document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+}
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = 'auto';
+            });
+});
+</script>
+
+
+
+</body>
+</html>

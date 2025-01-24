@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Planning Services - Weddings, Birthdays, Corporate</title>
+    <link href="service.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+       <!-- Navigation -->
+       <nav id="navigation" class="navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#" onclick="location.reload();"><img src="a6.jpg"></a>
+            </div>
+
+            <!-- Add hamburger menu button -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                <li><a href="main service page.html" class="nav-link">Services</a></li>
+                <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <button class="btn-primary">Your Events</button>
+        </div>
+            
+    </nav>
+
+    </header>
+    <!-- Birthday Party Planning Section -->
+    <section>
+        <h2>🎉 Birthday Party Planning</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <img src="image1.jpeg" alt="Birthday Theme">
+                <h3>Creative Themes</h3>
+                <p>Our specialty lies in designing creative, personalized party themes that transform your vision into a
+                    vibrant reality. Whether it's a lively, imaginative celebration for children or a refined, elegant
+                    soirée for adults, we tailor every detail to reflect your unique style and preferences. From décor
+                    to activities, each element is thoughtfully curated to create a cohesive and immersive atmosphere.
+                    Our custom themes ensure that every moment of your event is memorable, leaving a lasting impression
+                    on your guests and delivering an unforgettable experience that perfectly captures your desired
+                    aesthetic and spirit.
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="image2.avif" alt="Birthday Catering">
+                <h3>Delicious Catering</h3>
+                <p>Our catering service offers a culinary journey that delights the senses with expertly crafted menus,
+                    ranging from tantalizing snacks to lavish gourmet meals. Each dish is meticulously prepared using
+                    the finest ingredients, ensuring flavors that are both rich and satisfying. We customize our menus
+                    to cater to diverse tastes and dietary preferences, providing a personalized dining experience for
+                    every guest. Whether you're seeking a casual buffet or an elegant multi-course dinner, our catering
+                    team is dedicated to delivering exceptional quality and impeccable service, making your event a
+                    delectable success.</p>
+            </div>
+            <div class="service-card">
+                <img src="image3.jpg" alt="Birthday Entertainment">
+                <h3>Entertainment</h3>
+                <p>Our entertainment services are designed to captivate and delight your guests, ensuring a memorable
+                    experience from start to finish. With a diverse array of engaging activities and performances, we
+                    cater to all tastes and preferences, creating a lively and dynamic atmosphere. Whether it's live
+                    music, interactive games, theatrical performances, or immersive experiences, our entertainment
+                    options are tailored to keep the energy high and the smiles abundant. Your guests will be
+                    enthralled, engaged, and entertained throughout the entire event, leaving them with lasting memories
+                    and a day filled with joy and excitement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Toggle Navigation Menu for Mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add this JavaScript code
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

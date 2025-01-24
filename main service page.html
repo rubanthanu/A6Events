@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Management Services</title>
+    <link href="service.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navigation -->
+        <nav id="navigation" class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" onclick="location.reload();"><img src="a6.jpg"></a>
+                </div>
+
+                <!-- Add hamburger menu button -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                    <li><a href="main service page.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                    <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button class="btn-primary">Your Events</button>
+            </div>
+                
+        </nav>
+
+    </header>
+    <div class="center">
+        <h2>Creating memerable moments</h2>
+        <button class="prices"> <a href="price.html"><strong>View prices</strong></a></button>
+    </div>
+    <div class="services-wrapper">
+        <!-- Wedding Planning Service -->
+        <div class="service-box">
+            <img class="service-image" src="wedding.jpg" alt="Wedding Planning">
+            <div class="service-content">
+                <h3>Wedding Planning</h3>
+                <p>From selecting the venue to catering and décor, we take care of every detail to make your wedding day
+                    perfect.</p>
+
+                <a href="wedding.html">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Corporate Events Service -->
+        <div class="service-box">
+            <img class="service-image" src="corparative.jpg" alt="Corporate Events">
+            <div class="service-content">
+                <h3>Corporate Events</h3>
+                <p>We organize everything for your corporate event, from conferences to team-building and product
+                    launches.</p>
+                <a href="corporate.html">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Birthday Parties Service -->
+        <div class="service-box">
+            <img class="service-image" src="party.jpg" alt="Birthday Parties">
+            <div class="service-content">
+                <h3>Birthday Parties</h3>
+                <p>Personalized birthday parties that suit all ages, themes, and preferences. Let us make your birthday
+                    unforgettable.</p>
+                <a href="birthday.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button id="buttons"><a href="price.html">price</a></button> -->
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Toggle Navigation Menu for Mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add this JavaScript code
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Planning Services - Weddings, Birthdays, Corporate</title>
+    <link href="service.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav id="navigation" class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" onclick="location.reload();"><img src="a6.jpg"></a>
+                </div>
+
+                <!-- Add hamburger menu button -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                <li><a href="main service page.html" class="nav-link">Services</a></li>
+                <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button class="btn-primary">Your Events</button>
+            </div>
+                
+        </nav>
+
+    </header>
+    <!-- Corporate Event Planning Section -->
+    <section>
+        <h2>💼 Corporate Event Planning</h2>
+        <div class="service-container">
+            <div class="service-card">
+
+                <img src="co1.jpg" alt="Corporate Event Venue">
+                <h3>Professional Venues</h3>
+                <p>At our venues, we pride ourselves on providing professional, versatile spaces that are perfectly
+                    suited for corporate meetings, conferences, and events.</p>
+
+                <p>By choosing our professional venues, you gain access to a comprehensive, high-quality solution for
+                    your corporate events. Our commitment to versatility, technology, and service excellence ensures
+                    that every meeting, conference, or event is executed flawlessly, leaving a lasting impression on
+                    your attendees.</p>
+            </div>
+
+
+            <div class="service-card">
+                <img src="co3.jpeg" alt="Corporate Catering">
+                <h3>Corporate Catering</h3>
+                <p>Our corporate catering service is designed to complement and enhance your business events, whether
+                    it's a casual working lunch or an elegant formal dinner. Here's how we ensure a dining experience
+                    that exceeds your expectations:</p>
+
+                <p>Our corporate catering service is more than just food – it's about creating a memorable dining
+                    experience that complements the professionalism of your event. With a focus on quality,
+                    customization, and seamless service, we aim to exceed your expectations and leave a lasting
+                    impression on your guests.</p>
+            </div>
+            <div class="service-card">
+                <img src="co2.avif" alt="Corporate Entertainment">
+                <h3>Entertainment & Activities</h3>
+                <p>Enhance your corporate events with our diverse range of entertainment and activities, designed to
+                    engage, inspire, and leave a lasting impression on your team or clients. From interactive sessions
+                    to captivating performances, we offer solutions that elevate your event beyond the ordinary.</p>
+
+                <p>With our comprehensive entertainment and activity options, you can transform your corporate event
+                    into an unforgettable experience. Whether it's engaging team activities, inspirational guest
+                    speakers, or captivating live performances, we provide the perfect blend of entertainment to delight
+                    and engage your audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Toggle Navigation Menu for Mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add this JavaScript code
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

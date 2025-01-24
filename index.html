@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A6 events- home</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navigation" class="navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#" onclick="location.reload();"><img src="a6.png"></a>
+            </div>
+             <!-- Add hamburger menu button -->
+             <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                <li><a href="main service page.html" class="nav-link">Services</a></li>
+                <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <button class="btn-primary">Your Events</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero-section">
+      
+        <div class="hero-content">
+            <h1>Transform Your Vision  <span class="highlight">Into Reality</span></h1>
+            <p>We create unforgettable events tailored just for you.</p> 
+            <br> <br>
+            <button onclick="scrollToSection('about')">What We Do</button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">What We Do</h2>
+                <p><h4>A6 Events</h4> <br>We are dedicated to turning your special moments into unforgettable memories. As experts in event planning and management, we handle every aspect of your event with precision, creativity, and professionalism.
+
+                    Whether it’s a corporate event, wedding, birthday celebration, or any other special occasion, our team ensures a seamless experience from start to finish. We pride ourselves on tailoring every detail to your unique vision, delivering innovative solutions and flawless execution.
+                    
+                    With A6 Events, you can trust that your events are in the hands of passionate professionals who care about making your dreams a reality. Let us handle the details while you enjoy the moments that matter most!</p>
+                
+                <div class="graphics">
+                    <div class="graphic-item" id="graphic-1">
+                        <img src="19198080.png" alt="Planning" class="graphic-icon">
+                        <h3>Event Planning</h3>
+                        <p>Detailed, efficient planning that ensures a seamless experience for our clients and guests.</p>
+                    </div>
+                    <div class="graphic-item" id="graphic-2">
+                        <img src="1919808012.png" alt="Coordination" class="graphic-icon">
+                        <h3>Coordination</h3>
+                        <p>Coordinating with vendors and staff to deliver your dream event.</p>
+                    </div>
+                    <div class="graphic-item" id="graphic-3">
+                        <img src="191980801.png" alt="Execution" class="graphic-icon">
+                        <h3>Execution</h3>
+                        <p>Impeccable execution to turn ideas into reality with creativity and style.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

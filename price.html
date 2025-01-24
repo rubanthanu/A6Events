@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices - Our Services</title>
+    <link href="service.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+        <!-- Navigation -->
+        <nav id="navigation" class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" onclick="location.reload();"><img src="a6.jpg"></a>
+                </div>
+
+                <!-- Add hamburger menu button -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link">Portfolio</a></li> 
+                    <li><a href="main service page.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                    <li><a href="testimonial.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="Contact Us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <button class="btn-primary">Your Events</button>
+            </div>
+                
+        </nav>
+
+    </header>
+
+    <section class="pricing-section">
+        <h1>Our Event Services & Prices</h1>
+
+        <div class="pricing-table">
+            <!-- Wedding Service Pricing -->
+            <div class="pricing-card">
+                <h2>Wedding Planning</h2>
+                <p class="price">$2,499.99</p>
+                <ul>
+                    <li>Venue selection</li>
+                    <li>Catering coordination</li>
+                    <li>Decor and theme planning</li>
+                    <li>Wedding day coordination</li>
+                </ul>
+            </div>
+
+            <!-- Corporate Event Pricing -->
+            <div class="pricing-card">
+                <h2>Corporate Events</h2>
+                <p class="price">$1,799.99</p>
+                <ul>
+                    <li>Event venue selection</li>
+                    <li>Guest management</li>
+                    <li>Team-building activities</li>
+                    <li>Product launch planning</li>
+                </ul>
+            </div>
+
+            <!-- Birthday Party Pricing -->
+            <div class="pricing-card">
+                <h2>Birthday Parties</h2>
+                <p class="price">$799.99</p>
+                <ul>
+                    <li>Theme selection and decoration</li>
+                    <li>Entertainment booking</li>
+                    <li>Party favors and gifts</li>
+                    <li>Catering for guests</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; A6 Events All Rights Reserved.</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.x.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+    <script>
+        // Toggle Navigation Menu for Mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add this JavaScript code
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
